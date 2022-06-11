@@ -1,0 +1,106 @@
+.container {
+  width: 65rem;
+  height: 65rem;
+  border: 1px solid #5b5b5b;
+  border-radius: 2rem;
+  background-color: #fff5f5;
+  box-shadow: 0px 4px 28px 6px rgba(0, 0, 0, 0.25);
+  margin-left: 14rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container h2 {
+  font-size: 3.5rem;
+  padding: 2rem;
+  color: #3f3e3e;
+}
+
+.container p {
+  font-size: 2rem;
+  padding: 2rem;
+  color: #5b5b5b;
+}
+
+.container img {
+  width: 22rem;
+  height: 18rem;
+  text-indent: -10000px;
+}
+.container select {
+  border: none;
+  color: rgba(37, 60, 191, 1);
+  background-color: transparent;
+  font-size: 1.7rem;
+  font-weight: bolder;
+}
+.container option {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.inputFields {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  border-top: 3px solid #5b5b5b30;
+  border-bottom: 3px solid #5b5b5b30;
+}
+.inputContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.inputFields button {
+  height: 3rem;
+  width: 11rem;
+  background-color: rgba(37, 60, 191, 1);
+  border-radius: 2rem;
+  border: 1px solid #5b5b5b;
+  color: white;
+  margin-top: 2rem;
+}
+.inputButtons {
+  width: 10rem;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+.inputButtons img {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 2rem;
+}
+.inputButtons img:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.container input {
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  border: 1.5px solid rgba(37, 60, 191, 1);
+}
+@media only screen and (max-width: 1300px) {
+  .container {
+    transform: scale(0.8);
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .container {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 565px) {
+  .container {
+    width: 95%;
+  }
+}
