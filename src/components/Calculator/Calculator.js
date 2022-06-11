@@ -6,6 +6,7 @@ import sresistor from "./svgs/series-resistor.svg";
 import presistor from "./svgs/paralel-resistor.svg";
 import plus from "./svgs/plus.svg";
 import minus from "./svgs/minus.svg";
+import { motion } from "framer-motion";
 const Calculator = (props) => {
   const [link, setLink] = useState("default");
   const [inputFieldNumber, setInputFieldNumber] = useState(2);
@@ -80,12 +81,22 @@ const Calculator = (props) => {
   return (
     <div className={styles.container}>
       {props.selectedElement === "default" ? (
-        <>
+        <motion.div
+          className={styles.center}
+          key={props.selectedElement}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
           <h2>Kalulator otpornosti i kapacitivnosti</h2>
           <p>Odaberite element da biste počeli!</p>
-        </>
+        </motion.div>
       ) : (
-        <>
+        <motion.div
+          className={styles.center}
+          key={props.selectedElement}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
           <select
             name="Odabir spoja"
             id="element"
@@ -96,7 +107,13 @@ const Calculator = (props) => {
             <option value="serijski">Serijska veza</option>
             <option value="paralelni">Paralelna veza</option>
           </select>
-          <img src={element} alt="" />
+          <motion.img
+            key={element}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            src={element}
+            alt=""
+          />
           <form className={styles.inputFields} onSubmit={calculateFunction}>
             <div className={styles.inputContainer}>
               <input type="number" id={0} step=".01" min="0.1" required></input>
@@ -110,7 +127,7 @@ const Calculator = (props) => {
             <button>IZRAČUNAJ</button>
           </form>
           <h2>{result} Ω</h2>
-        </>
+        </motion.div>
       )}
     </div>
   );

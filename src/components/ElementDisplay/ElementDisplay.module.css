@@ -10,6 +10,12 @@
   justify-content: center;
   margin-right: 14rem;
 }
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .container img {
   width: 20rem;
   height: 10rem;
