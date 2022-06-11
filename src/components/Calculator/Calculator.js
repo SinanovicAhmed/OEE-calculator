@@ -109,8 +109,8 @@ const Calculator = (props) => {
           </select>
           <motion.img
             key={element}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, transition: { duration: 0.8 } }}
+            animate={{ opacity: 1, transition: { duration: 0.8 } }}
             src={element}
             alt=""
           />
