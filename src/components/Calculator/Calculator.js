@@ -17,7 +17,7 @@ const Calculator = (props) => {
       <input type="number" key={i} step=".01" min="0.1" required></input>
     );
   }
-  console.log(inputFieldNumber);
+
   const increaseInputs = (e) => {
     e.preventDefault();
     if (inputFieldNumber < 5) {
@@ -32,6 +32,7 @@ const Calculator = (props) => {
   };
   const changeLink = (e) => {
     setLink(e.target.value);
+    setResult(0);
   };
   const calculateFunction = (e) => {
     e.preventDefault();
@@ -126,7 +127,11 @@ const Calculator = (props) => {
             </div>
             <button>IZRAČUNAJ</button>
           </form>
-          <h2>{result} Ω</h2>
+          <h2>
+            {props.selectedElement === "Otpornik"
+              ? result + " Ω"
+              : result + " F"}
+          </h2>
         </motion.div>
       )}
     </div>
